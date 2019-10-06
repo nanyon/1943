@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>nanyon</title>
+<title>zsm and qt 's happy time</title>
 
 <style>
 *, *::before, *::after {
@@ -10,7 +10,7 @@
 }
 
 body {
-  min-height: 100vh;
+  min-height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,7 +22,10 @@ body {
           align-items: center;
   font-family: "Quicksand", sans-serif;
   font-size: 16px;
-  background: #FFCDB2	;
+  background:url(a.jpg)  no-repeat center center;
+  background-size:cover;
+  background-attachment:fixed;
+  background-color:#CCCCCC;
 }
 
 .countdown {
@@ -356,12 +359,13 @@ body {
 <script src="js/axios.min.js"></script>
 
 <div id="app">
-  <div class="bus">
+  <countdown></countdown>
+
     <div class="windows"></div>
     <div class="lights"></div>
     <div class="street"></div>
   </div>
-  <countdown></countdown>
+
 </div>
 
 <script>
@@ -409,7 +413,7 @@ Vue.component('countdown', {
   
  data() {
    return{
-     deadline: 'Jan 1, 2020 00:00:00',
+     deadline: 'Aug 7, 2019 00:00:00',
      days: 'HI',
      hours: 'TH',
      minutes: 'ER',
@@ -429,7 +433,7 @@ Vue.component('countdown', {
        // Difference between the 2 dates
        var countDownDate = new Date(ctx.deadline).getTime(),
            now = new Date().getTime(),
-           diff = countDownDate - now,
+           diff = now - countDownDate,
 
            // Time conversion to days, hours, minutes and seconds
            tdays = Math.floor(diff / (1000 * 60 * 60 * 24)),
