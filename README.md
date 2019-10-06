@@ -409,7 +409,7 @@ Vue.component('countdown', {
   
  data() {
    return{
-     deadline: 'Jan 1, 2020 00:00:00',   //这里设置日期倒计时间
+     deadline: 'Jan 1, 2020 00:00:00',
      days: 'HI',
      hours: 'TH',
      minutes: 'ER',
