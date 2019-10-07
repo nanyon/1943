@@ -362,7 +362,8 @@ body {
     <div class="windows"></div>
     <div class="lights"></div>
     <div class="street"></div>
-    <countdown></countdown>
+	
+	 <countdown></countdown>
   </div>
 
 </div>
@@ -396,7 +397,7 @@ Vue.component('countdown', {
         <p class="value">{{ theTime.seconds }}</p>
         <p class="label">seconds</p>
       </div>
-      <p class="text">don't worry be happy</p>
+      <p @click="gotolink" class="text">don't worry be happy</p>
     </div>
 
     <div v-show="expired" class="expired-timer timer">
@@ -420,7 +421,12 @@ Vue.component('countdown', {
      expired: false 
    };
  },
-  
+ 
+ methods:{
+         gotolink(){
+           this.$router.replace('/home.html')
+         }
+       },
  computed: {
    theTime(){
      var ctx = this,
